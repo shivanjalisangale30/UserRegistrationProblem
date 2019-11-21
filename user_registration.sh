@@ -3,20 +3,22 @@ echo "Welcome"
 
 shopt -s extglob
 
-echo "Enter your first name"
-read firstName
-echo "Enter your last name"
-read lastName
-echo "Enter your email id"
-read email
-echo "Enter your mobile number"
-read mobile
+#echo "Enter your first name"
+#read firstName
+#echo "Enter your last name"
+#read lastName
+#echo "Enter your email id"
+#read email
+#echo "Enter your mobile number"
+#read mobile
+echo "Enter your password"
+read password
 
 firstName1="^[A-Z][a-zA-Z]{3,15}$"
 lastName1="^[A-Z][a-zA-Z]{3,15}$"
 email1="^([0-9a-zA-Z]+)([_+-.][0-9a-zA-Z])?[@][0-9a-zA-Z]+([.][a-z]{2,4})([.][a-z]{2})?$"
 mobile1="^[0-9]{2}[ ]{1}[0-9]{10}$"
-
+passwordRule1="^[a-zA-Z]{8,15}$"
 
 function firstNameValidation()
 {
@@ -57,7 +59,20 @@ function mobileNumValidation()
       echo "Enter invalid mobile number"
   fi
 }
-firstNameValidation
-lastNameValidation
-emailIdValidation
-mobileNumValidation
+
+function passwordValidation()
+{
+  if [[ $password =~ $passwordRule1 ]]
+     then 
+       echo "Valid password"
+  else
+       echo "Invalid password"
+  fi
+}
+
+
+#firstNameValidation
+#lastNameValidation
+#emailIdValidation
+#mobileNumValidation
+passwordValidation
