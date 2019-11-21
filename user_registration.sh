@@ -3,13 +3,12 @@ echo "Welcome"
 
 shopt -s extglob
 
-#echo "Enter your first name"
-#read firstName
-#echo "Enter your last name"
-#read lastName
-#echo "Enter your email id"
-#read email
-#echo "Enter your mobile number"#read mobile
+echo "Enter your first name"
+read firstName
+echo "Enter your last name"
+read lastNameecho "Enter your email id"
+read email
+echo "Enter your mobile number"#read mobile
 echo "Enter your password"
 read password
 
@@ -74,8 +73,8 @@ function passwordValidation()
 }
 
 
-#firstNameValidation
-#lastNameValidation
-#emailIdValidation
-#mobileNumValidation
+firstNameValidation
+lastNameValidation
+emailIdValidation
+mobileNumValidation
 passwordValidation
