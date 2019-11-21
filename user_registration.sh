@@ -19,6 +19,7 @@ lastName1="^[A-Z][a-zA-Z]{3,15}$"
 email1="^([0-9a-zA-Z]+)([_+-.][0-9a-zA-Z])?[@][0-9a-zA-Z]+([.][a-z]{2,4})([.][a-z]{2})?$"
 mobile1="^[0-9]{2}[ ]{1}[0-9]{10}$"
 passwordRule1="^[a-zA-Z]{8,15}$"
+passwordRule2="^[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,15}$"
 
 function firstNameValidation()
 {
@@ -62,7 +63,7 @@ function mobileNumValidation()
 
 function passwordValidation()
 {
-  if [[ $password =~ $passwordRule1 ]]
+  if [[ $password =~ $passwordRule2 ]]
      then 
        echo "Valid password"
   else
