@@ -9,13 +9,16 @@ echo "Enter your last name"
 read lastName
 echo "Enter your email id"
 read email
+echo "Enter your mobile number"
+read mobile
 
 firstName1="^[A-Z][a-zA-Z]{3,15}$"
 lastName1="^[A-Z][a-zA-Z]{3,15}$"
 email1="^([0-9a-zA-Z]+)([_+-.][0-9a-zA-Z])?[@][0-9a-zA-Z]+([.][a-z]{2,4})([.][a-z]{2})?$"
+mobile1="^[0-9]{2}[ ]{1}[0-9]{10}$"
 
 
-function firstName()
+function firstNameValidation()
 {
   if [[ $firstName =~ $firstName1 ]]
      then 
@@ -25,7 +28,7 @@ function firstName()
   fi
 }
 
-function lastName()
+function lastNameValidation()
 {
   if [[ $lastName =~ $lastName1 ]]
      then 
@@ -35,7 +38,7 @@ function lastName()
   fi
 }
 
-function emailId()
+function emailIdValidation()
 {
    if [[ $email =~ $email1 ]]
       then
@@ -45,6 +48,16 @@ function emailId()
    fi
 }
 
-firstName
-lastName
-emailId
+function mobileNumValidation()
+{
+  if [[ $mobile =~ $mobile1 ]]
+     then
+      echo "Enter valid mobile number"
+  else
+      echo "Enter invalid mobile number"
+  fi
+}
+firstNameValidation
+lastNameValidation
+emailIdValidation
+mobileNumValidation
