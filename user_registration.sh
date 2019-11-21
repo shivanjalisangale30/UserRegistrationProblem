@@ -6,9 +6,11 @@ shopt -s extglob
 echo "Enter your first name"
 read firstName
 echo "Enter your last name"
-read lastNameecho "Enter your email id"
+read lastName
+echo "Enter your email id"
 read email
-echo "Enter your mobile number"#read mobile
+echo "Enter your mobile number"
+read mobile
 echo "Enter your password"
 read password
 
@@ -19,7 +21,7 @@ mobile1="^[0-9]{2}[ ]{1}[0-9]{10}$"
 passwordRule1="^[a-zA-Z]{8,15}$"
 passwordRule2="[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,}$"
 passwordRule3="^[a-zA-Z]*([A-Z]+)([0-9]+)[a-zA-Z]*{8,}$"
-passwordRule4="^[a-zA-Z]*([A-Z]+)([0-9]+)([+-_.]{1}+)[a-zA-Z]*{8,}"
+passwordRule4="^[a-zA-Z]*([A-Z]+)([0-9]+)([+-_.]{1})[a-zA-Z]*{8,}"
 
 
 function firstNameValidation()
