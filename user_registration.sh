@@ -3,15 +3,15 @@ echo "Welcome"
 
 shopt -s extglob
 
-#echo "Enter your first name"
-#read fname
+echo "Enter your first name"
+read firstName
 echo "Enter your last name"
-read lname
+read lastName
 
-fname1="^[A-Z][a-zA-Z]{3,15}$"
-lname1="^[A-Z][a-zA-Z]{3,15}$"
+firstName1="^[A-Z][a-zA-Z]{3,15}$"
+lastName1="^[A-Z][a-zA-Z]{3,15}$"
 
- if [[ $lname =~ $lname1 ]]
+ if [[ $firstName =~ $firstName1 && $lastName =~ $lastName1 ]]
      then 
       echo yes;
  else
